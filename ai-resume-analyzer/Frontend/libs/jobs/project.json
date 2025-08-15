@@ -1,0 +1,30 @@
+{
+  "name": "jobs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "Frontend/libs/jobs",
+  "sourceRoot": "Frontend/libs/jobs/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project jobs --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/jobs",
+        "main": "src/index.ts",
+        "tsConfig": "tsconfig.lib.json",
+        "assets": ["*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "Frontend/libs/jobs/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}

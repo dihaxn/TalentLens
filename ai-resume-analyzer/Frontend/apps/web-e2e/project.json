@@ -1,0 +1,11 @@
+{
+  "name": "web-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "Frontend/apps/web-e2e",
+  "projectType": "application",
+  "sourceRoot": "Frontend/apps/web-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["web"],
+  "// targets": "to see all targets run: nx show project web-e2e --web",
+  "targets": {}
+}

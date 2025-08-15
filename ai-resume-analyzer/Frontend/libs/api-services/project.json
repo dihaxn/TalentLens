@@ -1,0 +1,29 @@
+{
+  "name": "api-services",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "root": "Frontend/libs/api-services",
+  "sourceRoot": "Frontend/libs/api-services/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/api-services",
+        "main": "src/index.ts",
+        "tsConfig": "tsconfig.lib.json",
+        "assets": ["*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "Frontend/libs/api-services/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  }
+}
