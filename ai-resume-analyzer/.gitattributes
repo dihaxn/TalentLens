@@ -1,22 +1,36 @@
-# Set default behavior, in case users don't have core.autocrlf set.
-* text=auto
+# Enforce consistent line endings across platforms
+# Default: treat files as text and use LF in working tree and repo
+* text=auto eol=lf
 
-# Explicitly declare text files you want to always be normalized and converted
-# to native line endings on checkout.
-*.cmd text
-*.js text
-*.json text
-*.html text
-*.css text
-*.ts text
-*.tsx text
-*.md text
-*.mjs text
+# Common text file types (explicit for clarity)
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.env text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
 
-# Declare files that will always have CRLF line endings on checkout.
-*.sln text eol=crlf
+# Keep Windows EOL for Windows-only files (if any)
+*.cmd text eol=crlf
+*.bat text eol=crlf
 
-# Denote all files that are truly binary and should not be modified.
+# Binary assets
 *.png binary
 *.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
 *.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
